@@ -1,0 +1,33 @@
+
+  body, h1, h3, p {
+    font-family: 'Zilla slab', serif;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 20px;
+  }
+li {
+    list-style-type: none;
+}
+
+  .container {
+    text-align: center;
+    padding-top: 50px;
+ 
+  }
+
+  .quote-box {
+    border: 1px dashed black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 800px;
+    background-color: rgb(59, 55, 55);
+    color: whitesmoke;
+  }
+
