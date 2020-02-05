@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
     let quote;
-  
+  // pull from Forismatic API
     function getNewQuote() {
       $.ajax({
         url: 'http://api.forismatic.com/api/1.0/',
@@ -26,6 +26,7 @@ $(document).ready(function() {
       });
     }
     getNewQuote();
+
   // new quote and twitter button
     $('.get-quote').on('click', function(e) {
       e.preventDefault();
@@ -48,8 +49,7 @@ $(document).ready(function() {
    });
 
 // quote carousel
-
-var slideIndex = 1;
+let slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -57,8 +57,8 @@ function plusDivs(n) {
 }
 
 function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("quotes");
+  let i;
+  let x = document.getElementsByClassName("quotes");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length} ;
   for (i = 0; i < x.length; i++) {
