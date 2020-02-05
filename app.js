@@ -7,7 +7,7 @@ $(document).ready(function() {
     function getNewQuote() {
       $.ajax({
         url: 'http://api.forismatic.com/api/1.0/',
-        jsonp: 'jsonp',
+        jsonp: 'jsonp', //enables use of API
         dataType: 'jsonp',
         data: {
           method: 'getQuote',
@@ -38,15 +38,14 @@ $(document).ready(function() {
       window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(quote));
     });
 
-    // background color change every 5 seconds
-     window.setInterval(function(){
-         let randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
-       $('body').css({'background-color' : randomColor,
-       });
-    
-     }, 5000);
-  
-   });
+    // change background color on load
+  let bgColorArray = ['#8A8986','#498057','#E999E5'],
+    selectBG = 
+  bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+$('body').css('background-color', selectBG)
+
+});
 
 // quote carousel
 let slideIndex = 1;
